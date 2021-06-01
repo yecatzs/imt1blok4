@@ -67,9 +67,82 @@ background: black;
 color: white;
 }
 
-.verstopt{
-	background: greenyellow;
+
+.verstoptK3{
+	background: transparent;
+	color: transparent;
 	position: absolute;
+	padding: 150px 150px;
+	border: none;
+	font-size: 20px;
+}
+
+.CommentBOX{
+	top: 47%;
+	left: 60%;
+	position: absolute;
+	
+}
+
+.Facebook1BOX{
+	top: 37%;
+	left: 1%;
+	position: absolute;
+	
+}
+
+.Facebook2BOX{
+	top: 31%;
+	left: 75%;
+	position: absolute;
+
+}
+
+.LikeBOX{
+	top: 5%;
+	left: 1%;
+	position: absolute;
+	
+}
+
+.MailBOX{
+	top: 50%;
+	left: 22%;
+	position: absolute;
+
+}
+
+.McDonaldsBOX{
+	top: 1%;
+	left: 60%;
+	position: absolute;
+	
+}
+
+.NewsBOX{
+	top: 5%;
+	left: 85%;
+	position: absolute;
+	
+}
+
+.PhoneBOX{
+	top: 55%;
+	left: 85%;
+	position: absolute;
+
+}
+
+.WhatsappBOX{
+	top: 3%;
+	left: 20%;
+	position: absolute;
+
+}
+
+.verstopt{
+	background:transparent;
+	color: transparent;
 	padding: 60px 60px;
 	border: none;
 	font-size: 20px;
@@ -171,7 +244,18 @@ body{
 	height: 1080;
 }
 
+.list {
 
+	list-style-type: none;
+ 	margin: 0;
+  	padding: 0;
+}
+
+.K3Image{
+	position: absolute;
+	width: 100%;
+	height: auto;
+}
 
 #video_kamer4{
 	position:fixed;

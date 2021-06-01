@@ -2,6 +2,8 @@ var video;
 var k4klik = 0;
 var room = 0;
 var SC = 0;
+var RandomK3 = 8;
+
 
 
 
@@ -101,8 +103,21 @@ $(document).ready(function () {
 			});
 		}
 
+		$('#Phone').hide();
+		$('#Mail').hide();
+		$('#Facebook1').hide();
+		$('#McDonalds').hide();
+		$('#Facebook2').hide();
+		$('#Whatsapp').hide();
+		$('#News').hide();
+		$('#Comment').hide();
+		$('#Like').hide();
+
+
 		if (room === 3) {
 			Kamer3();
+
+
 
 
 			//terug van kamer 3 naar hoofdmenu
@@ -160,7 +175,7 @@ $(document).ready(function () {
 				$('#KnopNiks').show();
 			}
 
-			
+
 			//document.getElementById("Stopcontact").style.display = "hidden";
 			document.getElementById("Stopcontact").onclick = function () { Stopcontact() };
 			function Stopcontact() {
@@ -206,8 +221,169 @@ $(document).ready(function () {
 
 		//Kamer 3
 		function Kamer3() {
+			//RandomK3 = Math.floor(Math.random() * 9);
+			console.log("random:" + RandomK3);
 
+			if (RandomK3 === 0) {
+				$("#Comment").show();
+				document.getElementById("CommentBOX").onmouseover = function () { mouseOver0() };
 
+				function mouseOver0() {
+					if (RandomK3 === 0) {
+						RandomK3 = Math.floor(Math.random() * 9);
+						if (RandomK3 == 0) {
+							RandomK3 = Math.floor(Math.random() * 9);
+						}
+						else {
+							$("#Comment").hide();
+						}
+					}
+				}
+			}
+
+			if (RandomK3 === 1) {
+				$("#Facebook1").show();
+				document.getElementById("Facebook1BOX").onmouseover = function () { mouseOver1() };
+
+				function mouseOver1() {
+					if (RandomK3 === 1) {
+
+						RandomK3 = Math.floor(Math.random() * 9);
+						if (RandomK3 == 1) {
+							RandomK3 = Math.floor(Math.random() * 9);
+						}
+						else {
+							$("#Facebook1").hide();
+						}
+					}
+				}
+			}
+
+			if (RandomK3 === 2) {
+				$("#Facebook2").show();
+				document.getElementById("Facebook2BOX").onmouseover = function () { mouseOver2() };
+
+				function mouseOver2() {
+					if (RandomK3 === 2) {
+						
+						RandomK3 = Math.floor(Math.random() * 9);
+						if (RandomK3 == 2) {
+							RandomK3 = Math.floor(Math.random() * 9);
+						}
+						else {
+							$("#Facebook2").hide();
+						}
+					}
+				}
+			}
+
+			if (RandomK3 === 3) {
+				$("#Like").show();
+				document.getElementById("LikeBOX").onmouseover = function () { mouseOver3() };
+
+				function mouseOver3() {
+					if (RandomK3 === 3) {
+						
+						RandomK3 = Math.floor(Math.random() * 9);
+						if (RandomK3 == 3) {
+							RandomK3 = Math.floor(Math.random() * 9);
+						}
+						else {
+							$("#Like").hide();
+						}
+					}
+				}
+			}
+
+			if (RandomK3 === 4) {
+				$("#Mail").show();
+				document.getElementById("MailBOX").onmouseover = function () { mouseOver4() };
+
+				function mouseOver4() {
+					if (RandomK3 === 4) {
+						
+						RandomK3 = Math.floor(Math.random() * 9);
+						if (RandomK3 == 4) {
+							RandomK3 = Math.floor(Math.random() * 9);
+						}
+						else {
+							$("#Mail").hide();
+						}
+					}
+				}
+			}
+
+			if (RandomK3 === 5) {
+				$("#McDonalds").show();
+				document.getElementById("McDonaldsBOX").onmouseover = function () { mouseOver5() };
+
+				function mouseOver5() {
+					if (RandomK3 === 5) {
+						
+						RandomK3 = Math.floor(Math.random() * 9);
+						if (RandomK3 == 5) {
+							RandomK3 = Math.floor(Math.random() * 9);
+						}
+						else {
+							$("#McDonalds").hide();
+						}
+					}
+				}
+			}
+
+			if (RandomK3 === 6) {
+				$("#News").show();
+				document.getElementById("NewsBOX").onmouseover = function () { mouseOver6() };
+
+				function mouseOver6() {
+					if (RandomK3 === 6) {
+						
+						RandomK3 = Math.floor(Math.random() * 9);
+						if (RandomK3 == 6) {
+							RandomK3 = Math.floor(Math.random() * 9);
+						}
+						else {
+							$("#News").hide();
+						}
+					}
+				}
+			}
+
+			if (RandomK3 === 7) {
+				$("#Phone").show();
+				document.getElementById("PhoneBOX").onmouseover = function () { mouseOver7() };
+
+				function mouseOver7() {
+					if (RandomK3 === 7) {
+						
+						RandomK3 = Math.floor(Math.random() * 9);
+						if (RandomK3 == 7) {
+							RandomK3 = Math.floor(Math.random() * 9);
+						}
+						else {
+							$("#Phone").hide();
+						}
+					}
+				}
+			}
+
+			if (RandomK3 === 8) {
+				$("#Whatsapp").show();
+				document.getElementById("WhatsappBOX").onmouseover = function () { mouseOver8() };
+
+				function mouseOver8() {
+					if (RandomK3 === 8) {
+						
+						RandomK3 = Math.floor(Math.random() * 9);
+						if (RandomK3 == 8) {
+							RandomK3 = Math.floor(Math.random() * 9);
+						}
+						else {
+							$("#Whatsapp").hide();
+						}
+					}
+				}
+			}
 
 
 		}
@@ -346,10 +522,10 @@ $(document).ready(function () {
 				if (SC >= 1) {
 					video.currentTime = 46;
 				}
-				else{
+				else {
 					video.currentTime = 45;
 				}
-				
+
 			}
 			if (time === 45.9) {
 				video.currentTime = 45;
