@@ -10,13 +10,14 @@
 	<link rel="stylesheet" href="css/IVB4.css">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script type="text/javascript" src="processing.js"></script>
 	<script src="js/IVB4.js"></script>
 
 </head>
 
 <body>
 	<div id="StartPage">
-		<h1> TITEL</h1>
+		<h1> CONTROL</h1>
 		<pre>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
 Beatae odit repellendus, natus cupiditate eum soluta provident
 recusandae voluptatibus, sequi, odio reiciendis. Fugiat optio 
@@ -36,10 +37,10 @@ iste soluta vitae ea libero placeat eum.</pre>
 
 
 		<img id="overview" src="assets/overview.png" alt="overview">
-		<button id="Kamer 1" class="knop k1" onclick="K1()"type="button">Kamer 1</button>
+		<button id="Kamer 1" class="knop k1" onclick="K1()"type="button">Snake</button>
 		<button id="Kamer 2" class="knop k2" onclick="K2()"type="button">Kamer 2</button>
 		<button id="Kamer 3" class="knop k3" onclick="K3()"type="button">Kamer 3</button>
-		<button id="Kamer 4" class="knop k4" onclick="K4()"type="button">Kamer 4</button>
+		<button id="Kamer 4" class="knop k4" onclick="K4()"type="button">Losing Power</button>
 
 
 
@@ -50,8 +51,12 @@ iste soluta vitae ea libero placeat eum.</pre>
 	
 
 	<div id="Kamer1">
+		
+		<div id="snake" class="snake">
+			<canvas id="theCanvas" data-processing-sources="Evil_Snake_v3.pde" tabindex="0" width="500" height="500" style="image-rendering: -webkit-optimize-contrast !important;"></canvas>
 
-
+		</div>
+	<!--img id="spelmachine" class="K1image" src="assets/Kamer1.png"-->
 
 
 		<div id="OverlayKamer1">

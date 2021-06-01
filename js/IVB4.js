@@ -3,6 +3,7 @@ var k4klik = 0;
 var room = 0;
 var SC = 0;
 var RandomK3 = 8;
+var endvid = 0;
 
 
 
@@ -61,6 +62,11 @@ $(document).ready(function () {
 			$("#StartPage").fadeOut(500);
 			$('#OverlayKamer4').fadeIn(500);
 			$('#Kamer4').show();
+
+			$("#KnopLinks").hide();
+			$("#KnopMidden").hide();
+			$("#KnopRechts").hide();
+			
 			room = 4;
 			Kamer4();
 		}
@@ -135,49 +141,74 @@ $(document).ready(function () {
 		if (room === 4) {
 			Kamer4();
 
-			video.style.display = "inline";
-			$('#KnopLinks').hide();
-			$('#KnopMidden').hide();
-			$('#KnopRechts').hide();
 
 
-			document.getElementById("ButtonKnopLinks").onclick = function () { KnopLinks() };
+
+
+			document.getElementById("ButtonKnopLinks").onclick = function () { KnopLinks(); playvid() };
 			function KnopLinks() {
-				$('#KnopNiks').hide();
-				$('#KnopLinks').show();
+				$("#KnopNiks").hide();
+				$("#KnopLinks").show();
+				$('#ButtonKnopLinks').hide();
+				$('#ButtonKnopMidden').hide();
+				$('#ButtonKnopRechts').hide();
 				k4klik = k4klik + 1;
 				console.log("geklikt links");
-				setTimeout(1000);
-				$('#KnopNiks').show();
-				$('#KnopLinks').hide();
+				setTimeout(SL, 1000);
+				function SL() {
+					$('#ButtonKnopLinks').show();
+					$('#ButtonKnopMidden').show();
+					$('#ButtonKnopRechts').show();
+					$("#KnopNiks").show();
+					$("#KnopLinks").hide();
+
+				}
+
+
 
 			}
 
-			document.getElementById("ButtonKnopMidden").onclick = function () { KnopMidden() };
+			document.getElementById("ButtonKnopMidden").onclick = function () { KnopMidden(); playvid() };
 			function KnopMidden() {
-				$('#KnopNiks').hide();
-				$('#KnopMidden').show();
+				$("#KnopNiks").hide();
+				$("#KnopMidden").show();
+				$('#ButtonKnopLinks').hide();
+				$('#ButtonKnopMidden').hide();
+				$('#ButtonKnopRechts').hide();
 				k4klik = k4klik + 1;
 				console.log("geklikt midden");
-				setTimeout(1000);
-				$('#KnopMidden').hide();
-				$('#KnopNiks').show();
+				setTimeout(SM, 1000);
+				function SM() {
+					$('#ButtonKnopLinks').show();
+					$('#ButtonKnopMidden').show();
+					$('#ButtonKnopRechts').show();
+					$("#KnopMidden").hide();
+					$("#KnopNiks").show();
+				}
 			}
 
-			document.getElementById("ButtonKnopRechts").onclick = function () { KnopRechts() };
+			document.getElementById("ButtonKnopRechts").onclick = function () { KnopRechts(); playvid() };
 			function KnopRechts() {
-				$('#KnopNiks').hide();
-				$('#KnopRechts').show();
+				$("#KnopNiks").hide();
+				$("#KnopRechts").show();
+				$('#ButtonKnopLinks').hide();
+				$('#ButtonKnopMidden').hide();
+				$('#ButtonKnopRechts').hide();
 				k4klik = k4klik + 1;
 				console.log("geklikt rechts");
-				setTimeout(1000);
-				$('#KnopRechts').hide();
-				$('#KnopNiks').show();
+				setTimeout(SR, 1000);
+				function SR() {
+					$('#ButtonKnopLinks').show();
+					$('#ButtonKnopMidden').show();
+					$('#ButtonKnopRechts').show();
+					$("#KnopRechts").hide();
+					$("#KnopNiks").show();
+				}
 			}
 
 
 			//document.getElementById("Stopcontact").style.display = "hidden";
-			document.getElementById("Stopcontact").onclick = function () { Stopcontact() };
+			document.getElementById("Stopcontact").onclick = function () { Stopcontact(); playvid() };
 			function Stopcontact() {
 				SC = SC + 1;
 			}
@@ -193,6 +224,9 @@ $(document).ready(function () {
 				video.style.display = "hidden";
 				room = 0;
 				k4klik = 0;
+				SC = 0;
+				endvid = 0;
+				video.currentTime = 0;
 				$("#StartPage").fadeIn(500);
 				video.pause();
 			});
@@ -265,7 +299,7 @@ $(document).ready(function () {
 
 				function mouseOver2() {
 					if (RandomK3 === 2) {
-						
+
 						RandomK3 = Math.floor(Math.random() * 9);
 						if (RandomK3 == 2) {
 							RandomK3 = Math.floor(Math.random() * 9);
@@ -283,7 +317,7 @@ $(document).ready(function () {
 
 				function mouseOver3() {
 					if (RandomK3 === 3) {
-						
+
 						RandomK3 = Math.floor(Math.random() * 9);
 						if (RandomK3 == 3) {
 							RandomK3 = Math.floor(Math.random() * 9);
@@ -301,7 +335,7 @@ $(document).ready(function () {
 
 				function mouseOver4() {
 					if (RandomK3 === 4) {
-						
+
 						RandomK3 = Math.floor(Math.random() * 9);
 						if (RandomK3 == 4) {
 							RandomK3 = Math.floor(Math.random() * 9);
@@ -319,7 +353,7 @@ $(document).ready(function () {
 
 				function mouseOver5() {
 					if (RandomK3 === 5) {
-						
+
 						RandomK3 = Math.floor(Math.random() * 9);
 						if (RandomK3 == 5) {
 							RandomK3 = Math.floor(Math.random() * 9);
@@ -337,7 +371,7 @@ $(document).ready(function () {
 
 				function mouseOver6() {
 					if (RandomK3 === 6) {
-						
+
 						RandomK3 = Math.floor(Math.random() * 9);
 						if (RandomK3 == 6) {
 							RandomK3 = Math.floor(Math.random() * 9);
@@ -355,7 +389,7 @@ $(document).ready(function () {
 
 				function mouseOver7() {
 					if (RandomK3 === 7) {
-						
+
 						RandomK3 = Math.floor(Math.random() * 9);
 						if (RandomK3 == 7) {
 							RandomK3 = Math.floor(Math.random() * 9);
@@ -373,7 +407,7 @@ $(document).ready(function () {
 
 				function mouseOver8() {
 					if (RandomK3 === 8) {
-						
+
 						RandomK3 = Math.floor(Math.random() * 9);
 						if (RandomK3 == 8) {
 							RandomK3 = Math.floor(Math.random() * 9);
@@ -393,129 +427,201 @@ $(document).ready(function () {
 		//Kamer 4
 		function Kamer4() {
 
-
+			console.log(endvid);
 			video.style.display = "show";
 			$('#Stopcontact').hide();
-			video.currentTime = 0;
-			video.play();
+			//video.currentTime = 0;
+			if (endvid == 0) {
+				video.play();
+				$('#ButtonKnopLinks').show();
+				$('#ButtonKnopMidden').show();
+				$('#ButtonKnopRechts').show();
+			}
 
 			//stap 1
-			if (k4klik == 0) {
-				video.currentTime = 0;
-			}
+
 			if (time === 4.9) {
 				video.currentTime = 0;
 			}
 			//stap 2
-			if (k4klik == 1) {
-				video.currentTime = 5;
-			}
+
 			if (time === 9.9) {
 				video.currentTime = 5;
 			}
 			//stap 3
-			if (k4klik == 2) {
-				video.currentTime = 10;
-			}
+
 			if (time === 14.9) {
 				video.currentTime = 10;
 			}
+			//stap 4
+
+			if (time === 19.9) {
+				video.currentTime = 15;
+			}
+			//stap 5
+
+			if (time === 24.9) {
+				video.currentTime = 20;
+			}
+			//stap 6
+
+			if (time === 26.9) {
+				video.currentTime = 25;
+			}
+			//stap 7
+
+			if (time === 28.9) {
+				video.currentTime = 27;
+			}
+			//stap 8
+
+			if (time === 30.9) {
+				video.currentTime = 29;
+			}
+			//stap 9
+
+			if (time === 32.9) {
+				video.currentTime = 31;
+			}
+			//stap 10
+
+			if (time === 34.9) {
+				video.currentTime = 33;
+			}
+			//stap 11
+
+			if (time === 36.9) {
+				video.currentTime = 35;
+			}
+			//stap 12
+
+			if (time === 38.9) {
+				video.currentTime = 37;
+			}
+			//stap 13
+
+			if (time === 40.9) {
+				video.currentTime = 39;
+			}
+			//stap 14
+
+			if (time === 42.9) {
+				video.currentTime = 41;
+			}
+			//stap 15
+
+			if (time === 44.9) {
+				video.currentTime = 43;
+			}
+			//stap 16
+			if (k4klik >= 15) {
+				$('#Stopcontact').show();
+			}
+			if (time === 45.9) {
+				video.currentTime = 45;
+			}
+			if (time === 48) {
+				video.pause();
+			}
+			if (SC == 1) {
+				$('#Stopcontact').hide();
+				$('#ButtonKnopLinks').hide();
+				$('#ButtonKnopMidden').hide();
+				$('#ButtonKnopRechts').hide();
+				endvid = 1;
+
+			}
+		}
+
+		function playvid() {
+			if (k4klik == 0) {
+				video.play();
+				video.currentTime = 0;
+				
+			}
+
+			//stap 2
+			if (k4klik == 1) {
+				video.currentTime = 5;
+			}
+
+			//stap 3
+			if (k4klik == 2) {
+				video.currentTime = 10;
+			}
+
 			//stap 4
 			if (k4klik === 3) {
 				video.play();
 				video.currentTime = 15;
 			}
-			if (time === 19.9) {
-				video.currentTime = 15;
-			}
+
 			//stap 5
 			if (k4klik === 4) {
 				video.play();
 				video.currentTime = 20;
 			}
-			if (time === 24.9) {
-				video.currentTime = 20;
-			}
+
 			//stap 6
 			if (k4klik === 5) {
 				video.play();
 				video.currentTime = 25;
 			}
-			if (time === 26.9) {
-				video.currentTime = 25;
-			}
+
 			//stap 7
 			if (k4klik === 6) {
 				video.play();
 				video.currentTime = 27;
 			}
-			if (time === 28.9) {
-				video.currentTime = 27;
-			}
+
 			//stap 8
 			if (k4klik === 7) {
 				video.play();
 				video.currentTime = 29;
 			}
-			if (time === 30.9) {
-				video.currentTime = 29;
-			}
+
 			//stap 9
 			if (k4klik === 8) {
 				video.play();
 				video.currentTime = 31;
 			}
-			if (time === 32.9) {
-				video.currentTime = 31;
-			}
+
 			//stap 10
 			if (k4klik === 9) {
 				video.play();
 				video.currentTime = 33;
 			}
-			if (time === 34.9) {
-				video.currentTime = 33;
-			}
+
 			//stap 11
 			if (k4klik === 10) {
 				video.play();
 				video.currentTime = 35;
 			}
-			if (time === 36.9) {
-				video.currentTime = 35;
-			}
+
 			//stap 12
 			if (k4klik === 11) {
 				video.play();
 				video.currentTime = 37;
 			}
-			if (time === 38.9) {
-				video.currentTime = 37;
-			}
+
 			//stap 13
 			if (k4klik === 12) {
 				video.play();
 				video.currentTime = 39;
 			}
-			if (time === 40.9) {
-				video.currentTime = 39;
-			}
+
 			//stap 14
 			if (k4klik === 13) {
 				video.play();
 				video.currentTime = 41;
 			}
-			if (time === 42.9) {
-				video.currentTime = 41;
-			}
+
 			//stap 15
 			if (k4klik === 14) {
 				video.play();
 				video.currentTime = 43;
 			}
-			if (time === 44.9) {
-				video.currentTime = 43;
-			}
+
 			//stap 16
 			if (k4klik >= 15) {
 				$('#Stopcontact').show();
@@ -525,20 +631,8 @@ $(document).ready(function () {
 				else {
 					video.currentTime = 45;
 				}
-
 			}
-			if (time === 45.9) {
-				video.currentTime = 45;
-			}
-			if (time = 48) {
-				video.pause;
-			}
-
-
-
-
 		}
-
 
 	}
 

@@ -180,36 +180,47 @@ color: white;
 
 }
 
+.K1image{
+	position: fixed;
+	width: 100%;
+	height: auto;	
+}
+
+.snake{
+	position: fixed;
+	width: 100%;
+	height: auto;
+}
+
 .image{
 	position: fixed;
 	width: 100%;
 	height: auto;
-
-
 }
 
 .k4{
 	position: absolute;
-	left: 43% ;
+	left: 45% ;
 	top: 23%;
 }
 
 .k3{
 	position: absolute;
-	left: 60%;
+	left: 63%;
 	top: 40%;
 }
 	
 .k2{
 	position: absolute;
-	left: 35%;
-	top: 50%;
+	left: 53%;
+	top: 65%;
 }
 
 .k1{
 	position: absolute;
-	left: 50%;
-	top: 65%;
+	left: 40%;
+	top: 43%;
+	
 }
 
 h1{
@@ -218,7 +229,7 @@ h1{
 	position: absolute;
 	top: 0;
 	text-align: center;
-	left: 45%;
+	left: 2%;
 }
 
 pre{
