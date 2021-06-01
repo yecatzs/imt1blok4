@@ -139,8 +139,23 @@ color: white;
 	top: 65%;
 }
 
+h1{
+	color: white;
+	font-size: 40px;
+	position: absolute;
+	top: 0;
+	text-align: center;
+	left: 45%;
+}
 
-
+pre{
+	color: white;
+	font-size: 15px;
+	position: absolute;
+	top: 8%;
+	text-align: left;
+	left: 2%;
+}
 
 
 
