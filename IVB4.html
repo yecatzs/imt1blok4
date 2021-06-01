@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width" />
+
+	<title>TITEL EINDWERK</title>
+
+	<link rel="stylesheet" href="css/IVB4.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="js/IVB4.js"></script>
+
+</head>
+
+<body>
+	<div id="StartPage">
+
+		<img id="overview" src="assets/overview.png" alt="overview">
+		<button id="Kamer 1" class="knop k1" onclick="K1()"type="button">Kamer 1</button>
+		<button id="Kamer 2" class="knop k2" onclick="K2()"type="button">Kamer 2</button>
+		<button id="Kamer 3" class="knop k3" onclick="K3()"type="button">Kamer 3</button>
+		<button id="Kamer 4" class="knop k4" onclick="K4()"type="button">Kamer 4</button>
+	</div>
+
+
+	
+
+	<div id="Kamer1">
+
+
+
+
+		<div id="OverlayKamer1">
+			<a href="#" id="1naar4" class="left"><img src="assets/PijlLinks.png" alt="Leftarrow" width="100"
+					height="100"></a>
+			<a href="#" id="1naar2" class="right"><img src="assets/PijlRechts.png" alt="RightArrow" width="100"
+					height="100"></a>
+			<a href="#" id="1naarterug" class="top"><img src="assets/Kruis.png" alt="Back" width="60" height="60"></a>
+		</div>
+	</div>
+
+	<div id="Kamer2">
+
+
+		<div id="OverlayKamer2">
+			<a href="#" id="2naar1" class="left"><img src="assets/PijlLinks.png" alt="Leftarrow" width="100"
+					height="100"></a>
+			<a href="#" id="2naar3" class="right"><img src="assets/PijlRechts.png" alt="RightArrow" width="100"
+					height="100"></a>
+			<a href="#" id="2naarterug" class="top"><img src="assets/Kruis.png" alt="Back" width="60" height="60"></a>
+		</div>
+	</div>
+
+	<div id="Kamer3">
+
+
+		<div id="OverlayKamer3">
+			<a href="#" id="3naar2" class="left"><img src="assets/PijlLinks.png" alt="Leftarrow" width="100"
+					height="100"></a>
+			<a href="#" id="3naar4" class="right"><img src="assets/PijlRechts.png" alt="RightArrow" width="100"
+					height="100"></a>
+			<a href="#" id="3naarterug" class="top"><img src="assets/Kruis.png" alt="Back" width="60" height="60"></a>
+		</div>
+	</div>
+
+	<div id="Kamer4">
+
+		
+
+		
+
+		<img id="KnopNiks" class="image" src="assets/KnopNiks.png" >
+		<img id="KnopLinks" class="image" src="assets/KnopLinks.png" >
+		<img id="KnopMidden" class="image" src="assets/KnopMidden.png" >
+		<img id="KnopRechts" class="image" src="assets/KnopRechts.png" >
+
+		<button id="ButtonKnopLinks" class="verstopt KL" onclick="KnopLinks()" type="button">KNOP</button>
+		<button id="ButtonKnopMidden" class="verstopt KM" onclick="KnopMidden()" type="button">KNOP</button>
+		<button id="ButtonKnopRechts" class="verstopt KR" onclick="KnopRechts()" type="button">KNOP</button>
+		<button id="Stopcontact" class="verstopt ST" onclick="Stopcontact()" type="button">KNOP</button>
+		
+		<div id="OverlayKamer4">
+			<a href="#" id="4naar3" class="left"><img src="assets/PijlLinks.png" alt="Leftarrow" width="100"
+					height="100"></a>
+			<a href="#" id="4naar1" class="right"><img src="assets/PijlRechts.png" alt="RightArrow" width="100"
+					height="100"></a>
+			<a href="#" id="4naarterug" class="top"><img src="assets/Kruis.png" alt="Back" width="60" height="60"></a>
+		</div>
+
+		<video id="video_kamer4">
+			<source src="assets/Kamer4.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
+
+	</div>
+
+</body>
+
+
+</html>
