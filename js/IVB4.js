@@ -18,7 +18,7 @@ $(document).ready(function () {
 
 
 	//check function
-	var update = setInterval(check, 100);
+	var update = setInterval(check, 10);
 	// inside check function we need confitions
 
 	//set interval function // to call check
@@ -26,7 +26,8 @@ $(document).ready(function () {
 		//round down the time to get a whole number
 		var time = video.currentTime.toFixed(1);
 		time = Number(time);
-		//console.log(video.currentTime, time);
+		console.log(video.currentTime, time);
+		console.log(room);
 
 
 
@@ -440,7 +441,7 @@ $(document).ready(function () {
 		//Kamer 4
 		function Kamer4() {
 
-			console.log(endvid);
+			console.log(time);
 			video.style.display = "show";
 			$('#Stopcontact').hide();
 			//video.currentTime = 0;
@@ -527,6 +528,8 @@ $(document).ready(function () {
 			//stap 16
 			if (k4klik >= 15) {
 				$('#Stopcontact').show();
+				$('#OverlayKamer4').hide();
+				
 			}
 			if (time === 45.9) {
 				video.currentTime = 45;
@@ -539,6 +542,7 @@ $(document).ready(function () {
 				$('#ButtonKnopLinks').hide();
 				$('#ButtonKnopMidden').hide();
 				$('#ButtonKnopRechts').hide();
+				$('#OverlayKamer4').show();
 				endvid = 1;
 
 			}
