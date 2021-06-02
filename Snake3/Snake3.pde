@@ -80,7 +80,7 @@ class Snake {
   }
 
   void update() {
-    //hist.add(pos.copy());
+    hist.add(new PVector(pos.x, pos.y));
     pos.x += vel.x*grid;
     pos.y += vel.y*grid;
     moveX = int(vel.x);
