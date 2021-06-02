@@ -197,11 +197,11 @@ color: white;
 }
 
 #EC{
-	position: fixed;
-	width: 50%;
-	height: auto;
-	top: 25%;
-	left: 25%;	
+	position: absolute;
+	width: 1280px;
+	height: 720px;
+	top: 15%;
+	left: 20%;	
 }
 
 .snake{
