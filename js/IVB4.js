@@ -66,6 +66,9 @@ $(document).ready(function () {
 			$("#KnopLinks").hide();
 			$("#KnopMidden").hide();
 			$("#KnopRechts").hide();
+			$('#ButtonKnopLinks').show();
+			$('#ButtonKnopMidden').show();
+			$('#ButtonKnopRechts').show();
 			
 			room = 4;
 			Kamer4();
@@ -179,11 +182,11 @@ $(document).ready(function () {
 				console.log("geklikt midden");
 				setTimeout(SM, 1000);
 				function SM() {
+					$("#KnopMidden").hide();
+					$("#KnopNiks").show();
 					$('#ButtonKnopLinks').show();
 					$('#ButtonKnopMidden').show();
 					$('#ButtonKnopRechts').show();
-					$("#KnopMidden").hide();
-					$("#KnopNiks").show();
 				}
 			}
 
@@ -433,9 +436,7 @@ $(document).ready(function () {
 			//video.currentTime = 0;
 			if (endvid == 0) {
 				video.play();
-				$('#ButtonKnopLinks').show();
-				$('#ButtonKnopMidden').show();
-				$('#ButtonKnopRechts').show();
+				
 			}
 
 			//stap 1
