@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width" />
 
-	<title>TITEL EINDWERK</title>
+	<title>CONTROL</title>
 
 	<link rel="stylesheet" href="css/IVB4.css">
 
@@ -38,7 +38,7 @@ iste soluta vitae ea libero placeat eum.</pre>
 
 		<img id="overview" src="assets/overview.png" alt="overview">
 		<button id="Kamer 1" class="knop k1" onclick="K1()"type="button">Snake</button>
-		<button id="Kamer 2" class="knop k2" onclick="K2()"type="button">Kamer 2</button>
+		<button id="Kamer 2" class="knop k2" onclick="K2()"type="button">Up-To-Date</button>
 		<button id="Kamer 3" class="knop k3" onclick="K3()"type="button">Running Ahead or Behind</button>
 		<button id="Kamer 4" class="knop k4" onclick="K4()"type="button">Losing Power</button>
 
@@ -59,22 +59,19 @@ iste soluta vitae ea libero placeat eum.</pre>
 
 
 		<div id="OverlayKamer1">
-			<a href="#" id="1naar4" class="left"><img src="assets/PijlLinks.png" alt="Leftarrow" width="100"
-					height="100"></a>
-			<a href="#" id="1naar2" class="right"><img src="assets/PijlRechts.png" alt="RightArrow" width="100"
-					height="100"></a>
 			<a href="#" id="1naarterug" class="top"><img src="assets/Kruis.png" alt="Back" width="60" height="60"></a>
 		</div>
 	</div>
 
-	<div id="Kamer2">
+	<div id="Kamer2" class="kamer2">
+		
+		
+		<img id="K2BG" src="assets/Kamer2BG.png" >
+		<canvas id="EC"  data-processing-sources="EC/EC.pde" width="1280"  height="720"></canvas>
+		<div onmousemove="alert(event)"></div>
 
-
+		
 		<div id="OverlayKamer2">
-			<a href="#" id="2naar1" class="left"><img src="assets/PijlLinks.png" alt="Leftarrow" width="100"
-					height="100"></a>
-			<a href="#" id="2naar3" class="right"><img src="assets/PijlRechts.png" alt="RightArrow" width="100"
-					height="100"></a>
 			<a href="#" id="2naarterug" class="top"><img src="assets/Kruis.png" alt="Back" width="60" height="60"></a>
 		</div>
 	</div>
@@ -82,7 +79,7 @@ iste soluta vitae ea libero placeat eum.</pre>
 
 	<div id="Kamer3">
 
-]
+				<img id="Leeg" src="assets/meldingen/Niks.png" >
 				<img id="Comment" class="K3Image" src="assets/meldingen/Comment.png" alt="Comment">
 				<img id="Facebook1" class="K3Image" src="assets/meldingen/Facebook1.png" alt="Facebook1">
 				<img id="Facebook2" class="K3Image" src="assets/meldingen/Facebook2.png" alt="Facebook2">
@@ -92,6 +89,7 @@ iste soluta vitae ea libero placeat eum.</pre>
 				<img id="News" class="K3Image" src="assets/meldingen/News.png" alt="News">
 				<img id="Phone" class="K3Image" src="assets/meldingen/Phone.png" alt="Phone">
 				<img id="Whatsapp" class="K3Image" src="assets/meldingen/Whatsapp.png" alt="Whatsapp">
+				
 
 				<button id="CommentBOX" class="verstoptK3 CommentBOX" >KNOP</button>
 				<button id="Facebook1BOX" class="verstoptK3 Facebook1BOX" >KNOP</button>
@@ -106,10 +104,6 @@ iste soluta vitae ea libero placeat eum.</pre>
 
 
 		<div id="OverlayKamer3">
-			<a href="#" id="3naar2" class="left"><img src="assets/PijlLinks.png" alt="Leftarrow" width="100"
-					height="100"></a>
-			<a href="#" id="3naar4" class="right"><img src="assets/PijlRechts.png" alt="RightArrow" width="100"
-					height="100"></a>
 			<a href="#" id="3naarterug" class="top"><img src="assets/Kruis.png" alt="Back" width="60" height="60"></a>
 		</div>
 	</div>
@@ -126,10 +120,6 @@ iste soluta vitae ea libero placeat eum.</pre>
 		<button id="Stopcontact" class="verstopt ST" onclick="Stopcontact()" type="button">KNOP</button>
 		
 		<div id="OverlayKamer4">
-			<a href="#" id="4naar3" class="left"><img src="assets/PijlLinks.png" alt="Leftarrow" width="100"
-					height="100"></a>
-			<a href="#" id="4naar1" class="right"><img src="assets/PijlRechts.png" alt="RightArrow" width="100"
-					height="100"></a>
 			<a href="#" id="4naarterug" class="top"><img src="assets/Kruis.png" alt="Back" width="60" height="60"></a>
 		</div>
 

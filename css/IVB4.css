@@ -196,6 +196,14 @@ color: white;
 	height: auto;	
 }
 
+#EC{
+	position: fixed;
+	width: 50%;
+	height: auto;
+	top: 25%;
+	left: 25%;	
+}
+
 .snake{
 	position: absolute;
 	width: 18%;
@@ -214,7 +222,7 @@ color: white;
 
 .k4{
 	position: absolute;
-	left: 45% ;
+	left: 46% ;
 	top: 23%;
 }
 
@@ -232,9 +240,13 @@ color: white;
 
 .k1{
 	position: absolute;
-	left: 40%;
-	top: 43%;
+	left: 42%;
+	top: 46%;
 	
+}
+
+.kamer2{
+	background: black;
 }
 
 h1{
@@ -278,6 +290,18 @@ body{
 
 .K3Image{
 	position: absolute;
+	width: 100%;
+	height: auto;
+}
+
+#Leeg{
+	position: absolute;
+	width: 100%;
+	height: auto;
+}
+
+#K2BG{
+	position: fixed;
 	width: 100%;
 	height: auto;
 }

@@ -4,6 +4,7 @@ var room = 0;
 var SC = 0;
 var RandomK3 = 8;
 var endvid = 0;
+var keer = 0;
 
 
 
@@ -25,7 +26,7 @@ $(document).ready(function () {
 		//round down the time to get a whole number
 		var time = video.currentTime.toFixed(1);
 		time = Number(time);
-		console.log(video.currentTime, time);
+		//console.log(video.currentTime, time);
 
 
 
@@ -126,7 +127,7 @@ $(document).ready(function () {
 		if (room === 3) {
 			Kamer3();
 
-
+			
 
 
 			//terug van kamer 3 naar hoofdmenu
@@ -248,6 +249,15 @@ $(document).ready(function () {
 
 		//Kamer 2
 		function Kamer2() {
+			document.getElementById("EC").onmousemove = function(event) {keer1(event)};
+			function keer1(){
+				if(keer == 0)
+				{
+					alert("Use your mouse, press some keys, press enter and have some fun!");
+					keer = 1
+				}
+			}
+
 
 
 

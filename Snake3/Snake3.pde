@@ -151,9 +151,9 @@ class Snake {
       fill(255);
       textSize(25);
       textAlign(CENTER, CENTER);
-      text("PRESS TAB", width/4, height/4);
+      text("PRESS SHIFT", width/4, height/4);
     }
-    if (snake.len >= 22 && keyCode == TAB) {
+    if (snake.len >= 22 && keyCode == SHIFT) {
       fill(255);
       textSize(25);
       textAlign(CENTER, CENTER);
