@@ -27,6 +27,7 @@ int [] posY;
 int currentPos;
 int xpos;
 int ypos;
+int geklikt = 0;
 
 
 
@@ -47,12 +48,15 @@ void draw()
 {
 
   background(0);
+  if(geklikt == 1){
+  
   loadPixels();
   textSize(50);
   fill(255);
   pixels [255] = color (255);
   updatePixels();
   ultron();
+  }
 }
 
 void ultron() {
@@ -169,6 +173,7 @@ void keyPressed() {
 
 //muiskliks om na te bootsen 
 void mouseClicked() {
+  geklikt = 1;
 
   posX = append(posX, mouseX);
   posY = append(posY, mouseY);

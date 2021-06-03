@@ -29,6 +29,7 @@ $(document).ready(function () {
 		$("#StartPage").fadeOut(500);
 		$('#OverlayKamer2').fadeIn(500);
 		$('#Kamer2').show();
+
 		room = 2;
 
 	}
@@ -107,7 +108,7 @@ $(document).ready(function () {
 			//terug van kamer 2 naar hoofdmenu
 			$("#2naarterug").bind("click", function () {
 				$("#OverlayKamer2").fadeOut(500);
-				$("#Kamer2").fadeOut(500);
+				$("#Kamer2").hide();
 				room = 0;
 				$("#StartPage").fadeIn(500);
 			});
