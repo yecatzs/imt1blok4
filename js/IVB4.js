@@ -111,6 +111,7 @@ $(document).ready(function () {
 				$("#Kamer2").hide();
 				room = 0;
 				$("#StartPage").fadeIn(500);
+				location.reload();
 			});
 		}
 
