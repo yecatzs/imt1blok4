@@ -260,7 +260,9 @@ h1{
 
 pre{
 	color: white;
-	font-size: 15px;
+	width: 100%;
+	height: auto;
+	font-size: 13px;
 	position: absolute;
 	top: 8%;
 	text-align: left;
