@@ -15,10 +15,62 @@ $(document).ready(function () {
 	video = document.getElementById("video_kamer4");
 
 
+	//FrontPage
+	document.getElementById("Kamer 1").onclick = function () { K1() };
+	function K1() {
+		$("#StartPage").fadeOut(500);
+		$('#OverlayKamer1').fadeIn(500);
+		$('#Kamer1').show();
+		room = 1;
+	}
+
+	document.getElementById("Kamer 2").onclick = function () { K2() };
+	function K2() {
+		$("#StartPage").fadeOut(500);
+		$('#OverlayKamer2').fadeIn(500);
+		$('#Kamer2').show();
+		room = 2;
+
+	}
+
+	document.getElementById("Kamer 3").onclick = function () { K3() };
+	function K3() {
+		$("#StartPage").fadeOut(500);
+		$('#OverlayKamer3').fadeIn(500);
+		$('#Kamer3').show();
+		room = 3;
+	}
+
+	document.getElementById("Kamer 4").onclick = function () { K4() };
+	function K4() {
+		$("#StartPage").fadeOut(500);
+		$('#OverlayKamer4').fadeIn(500);
+		$('#Kamer4').show();
+
+		$("#KnopLinks").hide();
+		$("#KnopMidden").hide();
+		$("#KnopRechts").hide();
+		$('#ButtonKnopLinks').show();
+		$('#ButtonKnopMidden').show();
+		$('#ButtonKnopRechts').show();
+		room = 4;
+
+	}
+
+
+
+
+	document.getElementById("EC").onmousemove = function (event) { keer1(event) };
+	function keer1() {
+		if (keer == 0) {
+			alert("Use your mouse, press some keys, press enter and have some fun!");
+			keer = 1;
+		}
+	}
 
 
 	//check function
-	var update = setInterval(check, 10);
+	var update = setInterval(check, 100);
 	// inside check function we need confitions
 
 	//set interval function // to call check
@@ -28,53 +80,6 @@ $(document).ready(function () {
 		time = Number(time);
 		console.log(video.currentTime, time);
 		console.log(room);
-
-
-
-		//FrontPage
-		document.getElementById("Kamer 1").onclick = function () { K1() };
-		function K1() {
-			$("#StartPage").fadeOut(500);
-			$('#OverlayKamer1').fadeIn(500);
-			$('#Kamer1').show();
-			room = 1;
-			Kamer1();
-		}
-
-		document.getElementById("Kamer 2").onclick = function () { K2() };
-		function K2() {
-			$("#StartPage").fadeOut(500);
-			$('#OverlayKamer2').fadeIn(500);
-			$('#Kamer2').show();
-			room = 2;
-			Kamer2();
-		}
-
-		document.getElementById("Kamer 3").onclick = function () { K3() };
-		function K3() {
-			$("#StartPage").fadeOut(500);
-			$('#OverlayKamer3').fadeIn(500);
-			$('#Kamer3').show();
-			room = 3;
-			Kamer3();
-		}
-
-		document.getElementById("Kamer 4").onclick = function () { K4() };
-		function K4() {
-			$("#StartPage").fadeOut(500);
-			$('#OverlayKamer4').fadeIn(500);
-			$('#Kamer4').show();
-
-			$("#KnopLinks").hide();
-			$("#KnopMidden").hide();
-			$("#KnopRechts").hide();
-			$('#ButtonKnopLinks').show();
-			$('#ButtonKnopMidden').show();
-			$('#ButtonKnopRechts').show();
-			
-			room = 4;
-			Kamer4();
-		}
 
 
 		if (room === 0) {
@@ -88,23 +93,17 @@ $(document).ready(function () {
 			$('#Kamer4').hide();
 		}
 
-		if (room === 1) {
-			Kamer1();
+		if (room === 1) { }
+		//terug van kamer 1 naar hoofdmenu
+		$("#1naarterug").bind("click", function () {
+			$("#OverlayKamer1").fadeOut(500);
+			$("#Kamer1").fadeOut(500);
+			room = 0;
+			$("#StartPage").fadeIn(500);
+		});
 
-
-			//terug van kamer 1 naar hoofdmenu
-			$("#1naarterug").bind("click", function () {
-				$("#OverlayKamer1").fadeOut(500);
-				$("#Kamer1").fadeOut(500);
-				room = 0;
-				$("#StartPage").fadeIn(500);
-			});
-		}
 
 		if (room === 2) {
-			Kamer2();
-
-
 			//terug van kamer 2 naar hoofdmenu
 			$("#2naarterug").bind("click", function () {
 				$("#OverlayKamer2").fadeOut(500);
@@ -128,8 +127,6 @@ $(document).ready(function () {
 		if (room === 3) {
 			Kamer3();
 
-			
-
 
 			//terug van kamer 3 naar hoofdmenu
 			$("#3naarterug").bind("click", function () {
@@ -145,10 +142,6 @@ $(document).ready(function () {
 
 		if (room === 4) {
 			Kamer4();
-
-
-
-
 
 			document.getElementById("ButtonKnopLinks").onclick = function () { KnopLinks(); playvid() };
 			function KnopLinks() {
@@ -168,9 +161,6 @@ $(document).ready(function () {
 					$("#KnopLinks").hide();
 
 				}
-
-
-
 			}
 
 			document.getElementById("ButtonKnopMidden").onclick = function () { KnopMidden(); playvid() };
@@ -219,8 +209,7 @@ $(document).ready(function () {
 			}
 
 
-			console.log(k4klik);
-			console.log(SC);
+
 
 			//terug van kamer 4 naar hoofdmenu
 			$("#4naarterug").bind("click", function () {
@@ -237,33 +226,10 @@ $(document).ready(function () {
 			});
 		}
 
-		//Kamer 1
-		function Kamer1() {
 
 
 
 
-		}
-
-
-
-
-		//Kamer 2
-		function Kamer2() {
-			document.getElementById("EC").onmousemove = function(event) {keer1(event)};
-			function keer1(){
-				if(keer == 0)
-				{
-					alert("Use your mouse, press some keys, press enter and have some fun!");
-					keer = 1
-				}
-			}
-
-
-
-
-
-		}
 
 
 
@@ -441,100 +407,118 @@ $(document).ready(function () {
 		//Kamer 4
 		function Kamer4() {
 
+			console.log(k4klik);
+			console.log(SC);
 			console.log(time);
 			video.style.display = "show";
 			$('#Stopcontact').hide();
 			//video.currentTime = 0;
 			if (endvid == 0) {
 				video.play();
-				
+
 			}
 
 			//stap 1
 
-			if (time === 4.9) {
+			if (time >= 4.9 && time < 5) {
+				console.log("terug");
 				video.currentTime = 0;
 			}
 			//stap 2
 
-			if (time === 9.9) {
+			if (time >= 9.9 && time < 10) {
+				console.log("terug");
 				video.currentTime = 5;
 			}
 			//stap 3
 
-			if (time === 14.9) {
+			if (time >= 14.9 && time < 15) {
+				console.log("terug");
 				video.currentTime = 10;
 			}
 			//stap 4
 
-			if (time === 19.9) {
+			if (time >= 19.9 && time < 20) {
+				console.log("terug");
 				video.currentTime = 15;
 			}
 			//stap 5
 
-			if (time === 24.9) {
+			if (video.currentTime >= 24.8 && video.currentTime < 25) {
+				console.log("terug");
 				video.currentTime = 20;
 			}
 			//stap 6
 
-			if (time === 26.9) {
+			if (video.currentTime >= 26.8 && video.currentTime < 27) {
+				console.log("terug");
 				video.currentTime = 25;
 			}
 			//stap 7
 
-			if (time === 28.9) {
+			if (video.currentTime >= 28.8 && video.currentTime < 29) {
+				console.log("terug");
 				video.currentTime = 27;
 			}
 			//stap 8
 
-			if (time === 30.9) {
+			if (video.currentTime >= 30.8 && video.currentTime < 31) {
+				console.log("terug");
 				video.currentTime = 29;
 			}
 			//stap 9
 
-			if (time === 32.9) {
+			if (video.currentTime >= 32.8 && video.currentTime < 33) {
+				console.log("terug");
 				video.currentTime = 31;
 			}
 			//stap 10
 
-			if (time === 34.9) {
+			if (video.currentTime >= 34.8 && video.currentTime < 35) {
+				console.log("terug");
 				video.currentTime = 33;
 			}
 			//stap 11
 
-			if (time === 36.9) {
+			if (video.currentTime >= 36.8 && video.currentTime < 37) {
+				console.log("terug");
 				video.currentTime = 35;
 			}
 			//stap 12
 
-			if (time === 38.9) {
+			if (video.currentTime >= 38.8 && video.currentTime < 39) {
+				console.log("terug");
 				video.currentTime = 37;
 			}
 			//stap 13
 
-			if (time === 40.9) {
+			if (video.currentTime >= 40.8 && video.currentTime < 41) {
+				console.log("terug");
 				video.currentTime = 39;
 			}
 			//stap 14
 
-			if (time === 42.9) {
+			if (video.currentTime >= 42.8 && video.currentTime < 43) {
+				console.log("terug");
 				video.currentTime = 41;
 			}
 			//stap 15
 
-			if (time === 44.9) {
+			if (video.currentTime >= 44.8 && video.currentTime < 45) {
 				video.currentTime = 43;
 			}
 			//stap 16
 			if (k4klik >= 15) {
 				$('#Stopcontact').show();
 				$('#OverlayKamer4').hide();
-				
+
 			}
-			if (time === 45.9) {
+			if (video.currentTime >= 45.8 && video.currentTime < 46) {
+				console.log("terug");
 				video.currentTime = 45;
 			}
-			if (time === 48) {
+			if (video.currentTime >= 48) {
+				console.log("stop");
 				video.pause();
 			}
 			if (SC == 1) {
@@ -552,7 +536,7 @@ $(document).ready(function () {
 			if (k4klik == 0) {
 				video.play();
 				video.currentTime = 0;
-				
+
 			}
 
 			//stap 2
@@ -648,7 +632,6 @@ $(document).ready(function () {
 				}
 			}
 		}
-
 	}
 
 });// end ready func
